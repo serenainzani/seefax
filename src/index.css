@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+@import "tailwindcss";
+
+/* SIL OFL licensed — free to embed as a webfont. See
+   src/assets/fonts/ceefax-teletext-4-license.txt. */
+@font-face {
+    font-family: "Ceefax Teletext 4";
+    src: url("./assets/fonts/ceefax-teletext-4.otf") format("opentype");
+    font-display: swap;
+}
+
+@theme {
+    --color-teletext-black: #000000;
+    --color-teletext-white: #ffffff;
+    --color-teletext-yellow: #ffff00;
+    --color-teletext-cyan: #00ffff;
+    --color-teletext-green: #00ff00;
+    --color-teletext-red: #ff0000;
+    --color-teletext-blue: #0000ff;
+    --color-teletext-magenta: #ff00ff;
+
+    --font-teletext: "Ceefax Teletext 4", Consolas, "Courier New", monospace;
+    --font-logo: "Silkscreen", Consolas, monospace;
+}
+
+@layer base {
+    html,
+    body,
+    #root {
+        height: 100%;
+        margin: 0;
+        background: var(--color-teletext-black);
+    }
+}
+
+@layer components {
+    .teletext-dh {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
+}
